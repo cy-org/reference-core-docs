@@ -1,17 +1,17 @@
 {
   "build": {
+    "markdownEngineName": "dfm-latest",
     "content": [
       {
         "files": [
-          "**/*.md"
+          "api/**/*.yml",
+          "api/**/*.md"
         ],
         "exclude": [
-          "**/obj/**",
+          "api/overwrites/**",
+          "samples/**/*.*",
           "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "***/contributing.md"
         ]
       }
     ],
@@ -19,19 +19,62 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.svg",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.bmp"
         ],
+        "src": "add",
+        "dest": ".",
         "exclude": [
-          "**/obj/**",
-          "**/includes/**"
+          "metadata/**/*.*"
         ]
       }
     ],
-    "overwrite": [],
+    "overwrite": {
+        "files": [
+          "api/overwrites/**/*.md",
+          "apidoc/*.md"
+        ]
+      },
     "externalReference": [],
-    "globalMetadata": {},
-    "fileMetadata": {},
-    "template": [],
-    "dest": "reference-core-docs-cy-org"
+    "globalMetadata": {
+      "breadcrumb_path": "/dotnet/toc.json",
+      "_displayLangs": [
+        "csharp"
+      ],
+      "author": "dotnet-bot",
+      "ms.author": "dotnetcontent",
+      "manager": "wpickett",
+      "searchScope": [".NET"],
+      "uhfHeaderId": "MSDocsHeader-DotNet",
+      "apiPlatform": "dotnet"
+    },
+    "fileMetadata": {
+      "ms.prod": {
+        "api/**.yml": ".net"
+      },
+      "ms.topic": {
+        "api/**.yml": "managed-reference"
+     },
+      "langs": {
+        "api/**.yml": ["csharp", "vb", "cpp"]
+      },
+      "ROBOTS": {
+        "api/**.yml": "NOINDEX, NOFOLLOW"
+      }
+    },
+    "dest": "_site",
+    "template": [
+      "docs.html"
+    ],
+    "xref": [
+      "_zip/vs.110.zip",
+      "_zip/vs.140.zip",
+      "_zip/office15.zip",
+      "_zip/missingapi.yml",
+      "_zip/msdnsmallset.yml"
+    ],
+    "lruSize": 0
   }
 }
