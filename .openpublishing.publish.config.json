@@ -90,7 +90,7 @@
       "branch": "master"
     },
     {
-      "path_to_root": "_zip",
+      "path_to_root": "dotnet-xref",
       "url": "https://github.com/MicrosoftDocs/dotnet-xref",
       "branch": "live",
       "branch_mapping": {
