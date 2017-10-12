@@ -90,14 +90,13 @@
       "branch": "master"
     },
     {
-      "path_to_root": "_csharplang",
-      "url": "https://github.com/dotnet/csharplang",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "_vblang",
-      "url": "https://github.com/dotnet/vblang",
-      "branch": "master"
+      "path_to_root": "_zip",
+      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
+      "branch": "live",
+      "branch_mapping": {
+        "master": "master",
+        "live": "live"
+      }
     }
   ],
   "dependent_packages": [
